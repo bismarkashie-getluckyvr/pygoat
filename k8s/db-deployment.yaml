@@ -43,4 +43,5 @@ spec:
         - name: db-claim0
           persistentVolumeClaim:
             claimName: db-claim0
+            securityContext.allowPrivilegeEscalation: false
 status: {}
