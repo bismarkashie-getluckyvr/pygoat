@@ -32,6 +32,8 @@ spec:
               value: postgres
             - name: POSTGRES_USER
               value: postgres
+            - name: securityContext.allowPrivilegeEscalation
+              value: false
           image: postgres
           name: db
           resources: {}
@@ -43,5 +45,5 @@ spec:
         - name: db-claim0
           persistentVolumeClaim:
             claimName: db-claim0
-            securityContext.allowPrivilegeEscalation: false
+            
 status: {}
